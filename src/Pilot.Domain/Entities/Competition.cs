@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 
 namespace Pilot.Domain.Entities
 {
-    public class Players
+    public class Competition
     {
-        
+        public Guid Id { get; init; }
+        public string Name { get; set; }
     }
 }
