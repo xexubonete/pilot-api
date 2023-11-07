@@ -8,13 +8,13 @@ namespace Pilot.Domain.Entities
     public class Player
     {
         public Guid Id { get; init; }
-        public string FirstName { get; set; }
-        public string SecondName { get; set; }
+        public string FirstName { get; }
+        public string SecondName { get; }
         public string Position { get; set; }
         public int YellowCard { get; set; }
         public int RedCard { get; set; }
 
-        //FK Teams
+        //Navigational properties
         public Guid TeamId { get; set; }
 
     }

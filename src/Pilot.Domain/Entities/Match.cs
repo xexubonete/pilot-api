@@ -1,7 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Versioning;
 using System.Threading.Tasks;
+using Ardalis.GuardClauses;
+
 
 namespace Pilot.Domain.Entities
 {
@@ -9,10 +12,17 @@ namespace Pilot.Domain.Entities
     {
         public Guid Id { get; init; }
         
-        //FK 
-        public Guid CompetitionId { get; set; }
-        public Guid RefereeId { get; set; }
-        //Teams Collection
-        public ICollection<Team> Teams { get; set; }
+        //Navigational properties
+        public Guid CompetitionId { get; }
+        public Guid RefereeId { get; }
+        public ICollection<Team> Teams { get; }
+
+        public Match(Guid id, Guid competitionId, Guid refereeId, ICollection<Team> teams)
+        {
+            Id = id;
+            CompetitionId =  competitionId;
+            RefereeId = refereeId;
+
+        }
     }
 }
