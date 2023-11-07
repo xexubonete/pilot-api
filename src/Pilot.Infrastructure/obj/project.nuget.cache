@@ -1,8 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "ednhz58no5yt5usOEE5+NXUh0zP+SNHV/UVhUmyDKvQkwWaLNC+yxXGXyqXE7SFF8QD4wGEHGfW6ae3gjMmxpw==",
+  "dgSpecHash": "kHlFpeippGlvGsHLN5+c9iWpUfofJ0cW9sD6UiiHY+vp6fVlwAU24Z8BEZrph3ESowwNrdUuIQhYfkCyXAx0+Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\xexub\\Documents\\GitHub\\pilot-API\\src\\Pilot.Infrastructure\\Pilot.Infrastructure.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\xexub\\.nuget\\packages\\ardalis.guardclauses\\4.1.1\\ardalis.guardclauses.4.1.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\xexub\\Documents\\GitHub\\pilot-API\\src\\Pilot.Infrastructure\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
