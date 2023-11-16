@@ -8,11 +8,11 @@ namespace Pilot.Domain.Entities
     public class Team
     {
         public Guid Id { get; init; }
-        public string Name { get; }
-        public string League { get; }
-        public string Country { get; }
+        public string? Name { get; }
+        public string? League { get; }
+        public string? Country { get; }
 
         //Navigational properties
-        public ICollection<Match> Matchs { get; }
+        public ICollection<Match>? Matchs { get; }
     }
 }

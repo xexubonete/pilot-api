@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Versioning;
 using System.Threading.Tasks;
 using Ardalis.GuardClauses;
+using Pilot.Domain.Enum;
 
 
 namespace Pilot.Domain.Entities
@@ -13,14 +14,14 @@ namespace Pilot.Domain.Entities
         public Guid Id { get; init; }
         
         //Navigational properties
-        public Guid CompetitionId { get; }
+        public Competition Competition { get; set; }
         public Guid RefereeId { get; }
-        public ICollection<Team> Teams { get; }
+        public ICollection<Team> Teams { get; set; }
 
-        public Match(Guid id, Guid competitionId, Guid refereeId, ICollection<Team> teams)
+        public Match(Guid id, Competition competition, Guid refereeId, ICollection<Team> teams)
         {
             Id = id;
-            CompetitionId =  competitionId;
+            Competition =  competition;
             RefereeId = refereeId;
 
         }

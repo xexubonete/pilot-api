@@ -9,8 +9,8 @@ namespace Pilot.Domain.Entities
     public class Referee
     {
         public Guid Id { get; init; }
-        public string FirstName { get; }
-        public string SecondName { get; }
-        public ICollection<Language> Language { get; set; }
+        public string? FirstName { get; }
+        public string? SecondName { get; }
+        public ICollection<Language>? Language { get; set; }
     }
 }
