@@ -12,9 +12,9 @@ namespace Pilot.Domain.Entities
     public class Match
     {
         public Guid Id { get; init; }
+        public Competition Competition { get; set; }
         
         //Navigational properties
-        public Competition Competition { get; set; }
         public Guid RefereeId { get; }
         public ICollection<Team> Teams { get; set; }
 
