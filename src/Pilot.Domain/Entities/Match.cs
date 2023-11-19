@@ -13,15 +13,15 @@ namespace Pilot.Domain.Entities
     {
         public Guid Id { get; init; }
         public Competition Competition { get; set; }
-        
-        //Navigational properties
         public Guid RefereeId { get; }
+
+        //Navigational properties
         public ICollection<Team> Teams { get; set; }
 
-        public Match(Guid id, Competition competition, Guid refereeId, ICollection<Team> teams)
+        public Match(Guid id, int competition, Guid refereeId, ICollection<Team> teams)
         {
             Id = id;
-            Competition =  competition;
+            Competition =  Competition;
             RefereeId = refereeId;
 
         }
