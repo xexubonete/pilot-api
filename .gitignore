@@ -1,14 +1,14 @@
 # Carpeta bin generada por compilación
-src/Pilot.API/bin/
-src/Pilot.Application/bin/
-src/Pilot.Domain/bin/
-src/Pilot.Infrastructure/bin/
+src/Pilot.API/bin
+src/Pilot.Application/bin
+src/Pilot.Domain/bin
+src/Pilot.Infrastructure/bin
 
 # Carpeta obj generada por compilación
-src/Pilot.API/obj/
-src/Pilot.Application/obj/
-src/Pilot.Domain/obj/
-src/Pilot.Infrastructure/obj/
+src/Pilot.API/obj
+src/Pilot.Application/obj
+src/Pilot.Domain/obj
+src/Pilot.Infrastructure/obj
 
 # Carpeta de paquetes NuGet
 *.nuget/
@@ -91,3 +91,4 @@ __rider/
 
 # Archivos de configuración específicos de Visual Studio Code
 .vscode/
+.gitignore
