@@ -12,7 +12,52 @@ obj/
 *.user
 *.suo
 
+# Carpeta de caché# Carpeta bin generada por compilación
+bin/
+obj/
+
+# Carpeta de paquetes NuGet
+*.nuget/
+
+# Archivos de configuración de usuario
+*.suo
+*.user
+*.suo
+
 # Carpeta de caché
+[Cc]ache/
+
+# Archivos temporales
+[Tt]emp/
+[Tt]est[Rr]esult*/
+[Ll]ogs/
+
+# Archivos de compilación
+*.dll
+*.exe
+*.pdb
+*.dll.config
+*.exe.config
+*.log
+
+# Configuración de Rider
+.idea/
+
+# Carpeta de archivos generados por Rider
+__rider/
+
+# Archivos de configuración específicos de Visual Studio Code
+.vscode/
+
+# Archivos generados durante la compilación
+*.GeneratedMSBuildEditorConfig.editorconfig
+*.assets.cache
+*.csproj.AssemblyReference.cache
+*.csproj.nuget.dgspec.json
+*.csproj.nuget.g.props
+project.assets.json
+project.nuget.cache
+
 [Cc]ache/
 
 # Archivos temporales
