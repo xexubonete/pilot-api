@@ -1,8 +1,14 @@
 # Carpeta bin generada por compilación
-bin/
+Pilot.API/bin/
+Pilot.Application/bin/
+Pilot.Domain/bin/
+Pilot.Infrastructure/bin/
 
 # Carpeta obj generada por compilación
-obj/
+Pilot.API/obj/
+Pilot.Application/obj/
+Pilot.Domain/obj/
+Pilot.Infrastructure/obj/
 
 # Carpeta de paquetes NuGet
 *.nuget/
