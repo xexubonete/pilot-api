@@ -24,7 +24,10 @@ namespace Pilot.Infrastructure.Persistence.EntityConfigurations
             builder.Property(x => x.Id).ValueGeneratedNever();
 
             // Configure the "Competition" property as required (not nullable)
-            builder.Property(x => x.Competition).IsRequired();
+            builder.Property(x => x.Competition)
+            .HasColumnType("varchar(20)")
+            .HasMaxLength(20)
+            .IsRequired();
 
             // Specify the primary key for the "RefereeId" property            
             builder.HasKey(x => x.RefereeId);

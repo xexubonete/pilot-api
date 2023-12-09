@@ -17,7 +17,28 @@ namespace Pilot.Infrastructure.Persistence.EntityConfigurations
 
             builder.Property(x => x.FirstName)
             .HasColumnType("varchar(50)")
+            .HasMaxLength(50)
             .IsRequired();
+
+            builder.Property(x => x.SecondName)
+            .HasColumnType("varchar(50)")
+            .HasMaxLength(50)
+            .IsRequired();
+
+            builder.Property(x => x.Position)
+            .HasColumnType("varchar(50)")
+            .HasMaxLength(50)
+            .IsRequired();   
+
+            builder.Property(x => x.YellowCard)
+            .HasColumnType("decimal(2,0)")
+            .IsRequired();
+
+            builder.Property(x => x.YellowCard)
+            .HasColumnType("decimal(2,0)")
+            .IsRequired();        
+        
+        
         }
     }
 }
