@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Pilot.Domain.Entities;
@@ -28,10 +24,10 @@ namespace Pilot.Infrastructure.Persistence.EntityConfigurations
             .HasMaxLength(50)
             .IsRequired();
 
-            builder.Property(x => x.Competitions)
-            .HasColumnName("varchar(100)")
-            .HasMaxLength(100)
-            .IsRequired();
+            // builder.Property(x => x.Competitions)
+            // .HasColumnName("")
+            // .HasMaxLength(100)
+            // .IsRequired();
 
 
         }

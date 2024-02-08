@@ -1,20 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Microsoft.Extensions.DependencyInjection;
 using Pilot.Domain.Entities;
 
 namespace Pilot.Infrastructure.Persistence.DbContexts
 {
-    public class AppDbContext : DbContext
+    public class PilotDbContext : DbContext
     {
         // Constructor: Initializes a new instance of the AppDbContext class with the provided DbContextOptions.
-        public AppDbContext(DbContextOptions options) : base(options) { }
+        public PilotDbContext(DbContextOptions options) : base(options) { }
 
         // DbSet properties: Represent database tables for specific entities.
         public DbSet<Match> Matches { get; set; }

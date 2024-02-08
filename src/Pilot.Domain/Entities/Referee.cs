@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Ardalis.GuardClauses;
-using Pilot.Domain.Enum;
 
 namespace Pilot.Domain.Entities
 {
@@ -12,14 +7,16 @@ namespace Pilot.Domain.Entities
         public Guid Id { get; init; }
         public string? FirstName { get; }
         public string? SecondName { get; }
-        public ICollection<Language>? Languages { get; set; }
-        public Referee(Guid id, string firstName, string secondName, ICollection<int> languages)
+
+        // Navigational properties
+        public IEnumerable<Language>? Languages { get; set; }
+        public Referee(){}
+        public Referee(Guid id, string firstName, string secondName, IEnumerable<Language> languages)
         {
             Id = id;
             FirstName = Guard.Against.NullOrEmpty(firstName, nameof(firstName));
             SecondName = Guard.Against.NullOrEmpty(secondName, nameof(secondName));
-            
-            Languages = languages.Select(x => (Language)x).ToList();
+            Languages = languages;
         }
     }
 }
