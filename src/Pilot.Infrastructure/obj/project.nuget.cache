@@ -1,10 +1,28 @@
 {
   "version": 2,
-  "dgSpecHash": "kHlFpeippGlvGsHLN5+c9iWpUfofJ0cW9sD6UiiHY+vp6fVlwAU24Z8BEZrph3ESowwNrdUuIQhYfkCyXAx0+Q==",
+  "dgSpecHash": "iAelkZer4VrGsI88ZEFSaA++l3GxWOGVP9/RLDIFOjfe1ksEuaDxy7VK5g1ex0iZdJgETgy3uCJ7050gRqB4ow==",
   "success": true,
   "projectFilePath": "C:\\Users\\xexub\\Documents\\GitHub\\pilot-API\\src\\Pilot.Infrastructure\\Pilot.Infrastructure.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\xexub\\.nuget\\packages\\ardalis.guardclauses\\4.1.1\\ardalis.guardclauses.4.1.1.nupkg.sha512"
+    "C:\\Users\\xexub\\.nuget\\packages\\ardalis.guardclauses\\4.1.1\\ardalis.guardclauses.4.1.1.nupkg.sha512",
+    "C:\\Users\\xexub\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\xexub\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.25\\microsoft.entityframeworkcore.6.0.25.nupkg.sha512",
+    "C:\\Users\\xexub\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.25\\microsoft.entityframeworkcore.abstractions.6.0.25.nupkg.sha512",
+    "C:\\Users\\xexub\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.25\\microsoft.entityframeworkcore.analyzers.6.0.25.nupkg.sha512",
+    "C:\\Users\\xexub\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.25\\microsoft.entityframeworkcore.design.6.0.25.nupkg.sha512",
+    "C:\\Users\\xexub\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.25\\microsoft.entityframeworkcore.relational.6.0.25.nupkg.sha512",
+    "C:\\Users\\xexub\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\xexub\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
+    "C:\\Users\\xexub\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\xexub\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.1\\microsoft.extensions.dependencyinjection.6.0.1.nupkg.sha512",
+    "C:\\Users\\xexub\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\xexub\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",
+    "C:\\Users\\xexub\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\xexub\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\xexub\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\xexub\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
+    "C:\\Users\\xexub\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
+    "C:\\Users\\xexub\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

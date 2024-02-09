@@ -1,28 +1,24 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Versioning;
-using System.Threading.Tasks;
-using Ardalis.GuardClauses;
-
-
 namespace Pilot.Domain.Entities
 {
     public class Match
     {
         public Guid Id { get; init; }
-        
-        //Navigational properties
-        public Guid CompetitionId { get; }
         public Guid RefereeId { get; }
-        public ICollection<Team> Teams { get; }
+        public Guid CompetitionId { get; }
 
-        public Match(Guid id, Guid competitionId, Guid refereeId, ICollection<Team> teams)
+
+        //Navigational properties
+        public Team? LocalTeam { get; set; }
+        public Team? VisitorTeam { get; set; }
+
+        public Match(){}
+        public Match(Guid id, Guid refereeId, Guid competitionId, Team localTeam, Team visitorTeam)
         {
             Id = id;
-            CompetitionId =  competitionId;
             RefereeId = refereeId;
-
+            CompetitionId = competitionId;
+            LocalTeam = localTeam;
+            VisitorTeam = visitorTeam;
         }
     }
 }
