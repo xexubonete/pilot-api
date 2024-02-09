@@ -409,6 +409,12 @@ src/Pilot.Domain/bin/
 src/Pilot.Infrastructure/bin/
 
 # Carpeta obj generada por compilación
+src/Pilot.API/obj/Debug/net6.0
+src/Pilot.Application/obj/Debug/net6.0
+src/Pilot.Domain/obj/Debug/net6.0
+src/Pilot.Infrastructure/obj/Debug/net6.0
+
+# Carpeta obj generada por compilación
 src/Pilot.API/obj/
 src/Pilot.Application/obj/
 src/Pilot.Domain/obj/
