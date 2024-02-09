@@ -12,8 +12,8 @@ using Pilot.Infrastructure.Persistence.DbContexts;
 namespace Pilot.Infrastructure.Migrations
 {
     [DbContext(typeof(PilotDbContext))]
-    [Migration("20240106235734_SecondMigrate")]
-    partial class SecondMigrate
+    [Migration("20240209234706_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -226,7 +226,7 @@ namespace Pilot.Infrastructure.Migrations
                     b.HasOne("Pilot.Domain.Entities.Team", "VisitorTeam")
                         .WithMany("VisitorMatchs")
                         .HasForeignKey("VisitorTeamId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("LocalTeam");

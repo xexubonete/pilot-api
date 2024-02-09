@@ -111,8 +111,8 @@ namespace Pilot.Infrastructure.Migrations
                     RefereeId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     CompetitionId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    LocalTeamId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    VisitorTeamId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                    LocalTeamId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    VisitorTeamId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -127,7 +127,8 @@ namespace Pilot.Infrastructure.Migrations
                         name: "FK_MATCH_TEAM_LocalTeamId",
                         column: x => x.LocalTeamId,
                         principalTable: "TEAM",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_MATCH_TEAM_VisitorTeamId",
                         column: x => x.VisitorTeamId,

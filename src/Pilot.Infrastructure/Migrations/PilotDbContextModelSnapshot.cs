@@ -224,7 +224,7 @@ namespace Pilot.Infrastructure.Migrations
                     b.HasOne("Pilot.Domain.Entities.Team", "VisitorTeam")
                         .WithMany("VisitorMatchs")
                         .HasForeignKey("VisitorTeamId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("LocalTeam");
