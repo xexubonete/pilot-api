@@ -8,19 +8,17 @@ namespace Pilot.Infrastructure.Persistence.EntityConfigurations
     {
         public void Configure(EntityTypeBuilder<Team> builder)
         {
-            builder.ToTable("TEAM");
+            builder.ToTable("Team");
             builder.HasKey(x => x.Id);
 
             builder.Property(x => x.Id)
             .ValueGeneratedNever();
 
             builder.Property(x => x.Name)
-            .HasColumnName("varchar(50)")
             .HasMaxLength(50)
             .IsRequired();
 
             builder.Property(x => x.Country)
-            .HasColumnName("varchar(50)")
             .HasMaxLength(50)
             .IsRequired();
 

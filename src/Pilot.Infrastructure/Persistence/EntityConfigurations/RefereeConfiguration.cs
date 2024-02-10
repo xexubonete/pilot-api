@@ -8,17 +8,15 @@ namespace Pilot.Infrastructure.Persistence.EntityConfigurations
     {
         public void Configure(EntityTypeBuilder<Referee> builder)
         {
-            builder.ToTable("REFEREE");
+            builder.ToTable("Referee");
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).ValueGeneratedNever();
 
             builder.Property(x => x.FirstName)
-            .HasColumnName("varchar(50)")
             .HasMaxLength(50)
             .IsRequired();
 
             builder.Property(x => x.SecondName)
-            .HasColumnName("varchar(50)")
             .HasMaxLength(50)
             .IsRequired();
         }

@@ -12,7 +12,7 @@ namespace Pilot.Infrastructure.Persistence.EntityConfigurations
         public void Configure(EntityTypeBuilder<Match> builder)
         {
             // Set the table name for the "Match" entity
-            builder.ToTable("MATCH");
+            builder.ToTable("Match");
 
             // Specify the primary key for the entity
             builder.HasKey(x => x.Id);

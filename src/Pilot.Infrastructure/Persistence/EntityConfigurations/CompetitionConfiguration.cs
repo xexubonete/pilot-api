@@ -13,12 +13,11 @@ namespace Pilot.Infrastructure.Persistence.EntityConfigurations
     {
         public void Configure(EntityTypeBuilder<Competition> builder)
         {
-            builder.ToTable("COMPETITION");
+            builder.ToTable("Competition");
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).ValueGeneratedNever();
 
             builder.Property(x => x.Name)
-            .HasColumnName("varchar(50)")
             .HasMaxLength(50)
             .IsRequired();
         }
