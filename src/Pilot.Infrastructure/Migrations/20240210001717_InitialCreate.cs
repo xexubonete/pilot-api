@@ -10,56 +10,58 @@ namespace Pilot.Infrastructure.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "LANGUAGE",
+                name: "Language",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    varchar50 = table.Column<string>(name: "varchar(50)", type: "nvarchar(50)", maxLength: 50, nullable: false)
+                    Diaclect = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_LANGUAGE", x => x.Id);
+                    table.PrimaryKey("PK_Language", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "PLAYER",
+                name: "Player",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    FirstName = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
-                    SecondName = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
-                    Position = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
-                    YellowCard = table.Column<decimal>(type: "decimal(2,0)", nullable: false),
+                    FirstName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    SecondName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Position = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    YellowCard = table.Column<int>(type: "int", nullable: false),
                     RedCard = table.Column<int>(type: "int", nullable: false),
                     TeamId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PLAYER", x => x.Id);
+                    table.PrimaryKey("PK_Player", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "REFEREE",
+                name: "Referee",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    varchar50 = table.Column<string>(name: "varchar(50)", type: "nvarchar(50)", maxLength: 50, nullable: false)
+                    FirstName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    SecondName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_REFEREE", x => x.Id);
+                    table.PrimaryKey("PK_Referee", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "TEAM",
+                name: "Team",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    varchar50 = table.Column<string>(name: "varchar(50)", type: "nvarchar(50)", maxLength: 50, nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Country = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TEAM", x => x.Id);
+                    table.PrimaryKey("PK_Team", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -73,39 +75,39 @@ namespace Pilot.Infrastructure.Migrations
                 {
                     table.PrimaryKey("PK_LanguageReferee", x => new { x.LanguagesId, x.RefereesId });
                     table.ForeignKey(
-                        name: "FK_LanguageReferee_LANGUAGE_LanguagesId",
+                        name: "FK_LanguageReferee_Language_LanguagesId",
                         column: x => x.LanguagesId,
-                        principalTable: "LANGUAGE",
+                        principalTable: "Language",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_LanguageReferee_REFEREE_RefereesId",
+                        name: "FK_LanguageReferee_Referee_RefereesId",
                         column: x => x.RefereesId,
-                        principalTable: "REFEREE",
+                        principalTable: "Referee",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "COMPETITION",
+                name: "Competition",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    varchar50 = table.Column<string>(name: "varchar(50)", type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     TeamId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_COMPETITION", x => x.Id);
+                    table.PrimaryKey("PK_Competition", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_COMPETITION_TEAM_TeamId",
+                        name: "FK_Competition_Team_TeamId",
                         column: x => x.TeamId,
-                        principalTable: "TEAM",
+                        principalTable: "Team",
                         principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
-                name: "MATCH",
+                name: "Match",
                 columns: table => new
                 {
                     RefereeId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -116,29 +118,29 @@ namespace Pilot.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MATCH", x => x.RefereeId);
+                    table.PrimaryKey("PK_Match", x => x.RefereeId);
                     table.ForeignKey(
-                        name: "FK_MATCH_COMPETITION_CompetitionId",
+                        name: "FK_Match_Competition_CompetitionId",
                         column: x => x.CompetitionId,
-                        principalTable: "COMPETITION",
+                        principalTable: "Competition",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_MATCH_TEAM_LocalTeamId",
+                        name: "FK_Match_Team_LocalTeamId",
                         column: x => x.LocalTeamId,
-                        principalTable: "TEAM",
+                        principalTable: "Team",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_MATCH_TEAM_VisitorTeamId",
+                        name: "FK_Match_Team_VisitorTeamId",
                         column: x => x.VisitorTeamId,
-                        principalTable: "TEAM",
+                        principalTable: "Team",
                         principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_COMPETITION_TeamId",
-                table: "COMPETITION",
+                name: "IX_Competition_TeamId",
+                table: "Competition",
                 column: "TeamId");
 
             migrationBuilder.CreateIndex(
@@ -147,18 +149,18 @@ namespace Pilot.Infrastructure.Migrations
                 column: "RefereesId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MATCH_CompetitionId",
-                table: "MATCH",
+                name: "IX_Match_CompetitionId",
+                table: "Match",
                 column: "CompetitionId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MATCH_LocalTeamId",
-                table: "MATCH",
+                name: "IX_Match_LocalTeamId",
+                table: "Match",
                 column: "LocalTeamId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MATCH_VisitorTeamId",
-                table: "MATCH",
+                name: "IX_Match_VisitorTeamId",
+                table: "Match",
                 column: "VisitorTeamId");
         }
 
@@ -168,22 +170,22 @@ namespace Pilot.Infrastructure.Migrations
                 name: "LanguageReferee");
 
             migrationBuilder.DropTable(
-                name: "MATCH");
+                name: "Match");
 
             migrationBuilder.DropTable(
-                name: "PLAYER");
+                name: "Player");
 
             migrationBuilder.DropTable(
-                name: "LANGUAGE");
+                name: "Language");
 
             migrationBuilder.DropTable(
-                name: "REFEREE");
+                name: "Referee");
 
             migrationBuilder.DropTable(
-                name: "COMPETITION");
+                name: "Competition");
 
             migrationBuilder.DropTable(
-                name: "TEAM");
+                name: "Team");
         }
     }
 }

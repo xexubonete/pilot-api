@@ -12,7 +12,7 @@ using Pilot.Infrastructure.Persistence.DbContexts;
 namespace Pilot.Infrastructure.Migrations
 {
     [DbContext(typeof(PilotDbContext))]
-    [Migration("20240209234706_InitialCreate")]
+    [Migration("20240210001717_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -47,8 +47,7 @@ namespace Pilot.Infrastructure.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasColumnName("varchar(50)");
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<Guid?>("TeamId")
                         .HasColumnType("uniqueidentifier");
@@ -57,7 +56,7 @@ namespace Pilot.Infrastructure.Migrations
 
                     b.HasIndex("TeamId");
 
-                    b.ToTable("COMPETITION", (string)null);
+                    b.ToTable("Competition", (string)null);
                 });
 
             modelBuilder.Entity("Pilot.Domain.Entities.Language", b =>
@@ -68,12 +67,11 @@ namespace Pilot.Infrastructure.Migrations
                     b.Property<string>("Diaclect")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasColumnName("varchar(50)");
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("LANGUAGE", (string)null);
+                    b.ToTable("Language", (string)null);
                 });
 
             modelBuilder.Entity("Pilot.Domain.Entities.Match", b =>
@@ -101,7 +99,7 @@ namespace Pilot.Infrastructure.Migrations
 
                     b.HasIndex("VisitorTeamId");
 
-                    b.ToTable("MATCH", (string)null);
+                    b.ToTable("Match", (string)null);
                 });
 
             modelBuilder.Entity("Pilot.Domain.Entities.Player", b =>
@@ -113,12 +111,12 @@ namespace Pilot.Infrastructure.Migrations
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Position")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("RedCard")
                         .HasColumnType("int");
@@ -126,17 +124,17 @@ namespace Pilot.Infrastructure.Migrations
                     b.Property<string>("SecondName")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<Guid>("TeamId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<decimal>("YellowCard")
-                        .HasColumnType("decimal(2,0)");
+                    b.Property<int>("YellowCard")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.ToTable("PLAYER", (string)null);
+                    b.ToTable("Player", (string)null);
                 });
 
             modelBuilder.Entity("Pilot.Domain.Entities.Referee", b =>
@@ -146,21 +144,17 @@ namespace Pilot.Infrastructure.Migrations
 
                     b.Property<string>("FirstName")
                         .IsRequired()
-                        .ValueGeneratedOnUpdateSometimes()
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasColumnName("varchar(50)");
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("SecondName")
                         .IsRequired()
-                        .ValueGeneratedOnUpdateSometimes()
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasColumnName("varchar(50)");
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("REFEREE", (string)null);
+                    b.ToTable("Referee", (string)null);
                 });
 
             modelBuilder.Entity("Pilot.Domain.Entities.Team", b =>
@@ -170,21 +164,17 @@ namespace Pilot.Infrastructure.Migrations
 
                     b.Property<string>("Country")
                         .IsRequired()
-                        .ValueGeneratedOnUpdateSometimes()
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasColumnName("varchar(50)");
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .ValueGeneratedOnUpdateSometimes()
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasColumnName("varchar(50)");
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("TEAM", (string)null);
+                    b.ToTable("Team", (string)null);
                 });
 
             modelBuilder.Entity("LanguageReferee", b =>
