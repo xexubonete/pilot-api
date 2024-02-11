@@ -1,5 +1,0 @@
-C:\Users\xexub\Documents\GitHub\pilot-API\src\Pilot.Domain\obj\Debug\net6.0\Pilot.Domain.csproj.AssemblyReference.cache
-C:\Users\xexub\Documents\GitHub\pilot-API\src\Pilot.Domain\obj\Debug\net6.0\Pilot.Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\xexub\Documents\GitHub\pilot-API\src\Pilot.Domain\obj\Debug\net6.0\Pilot.Domain.AssemblyInfoInputs.cache
-C:\Users\xexub\Documents\GitHub\pilot-API\src\Pilot.Domain\obj\Debug\net6.0\Pilot.Domain.AssemblyInfo.cs
-C:\Users\xexub\Documents\GitHub\pilot-API\src\Pilot.Domain\obj\Debug\net6.0\Pilot.Domain.csproj.CoreCompileInputs.cache
