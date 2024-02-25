@@ -5,15 +5,15 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Pilot.Infrastructure.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class InitialMigrate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Language", 
+                name: "Language",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false),
                     Diaclect = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
@@ -68,7 +68,7 @@ namespace Pilot.Infrastructure.Migrations
                 name: "LanguageReferee",
                 columns: table => new
                 {
-                    LanguagesId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    LanguagesId = table.Column<int>(type: "int", nullable: false),
                     RefereesId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
@@ -92,7 +92,7 @@ namespace Pilot.Infrastructure.Migrations
                 name: "Competition",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     TeamId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
@@ -112,7 +112,7 @@ namespace Pilot.Infrastructure.Migrations
                 {
                     RefereeId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    CompetitionId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CompetitionId = table.Column<int>(type: "int", nullable: false),
                     LocalTeamId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     VisitorTeamId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },

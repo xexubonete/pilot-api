@@ -12,8 +12,8 @@ using Pilot.Infrastructure.Persistence.DbContexts;
 namespace Pilot.Infrastructure.Migrations
 {
     [DbContext(typeof(PilotDbContext))]
-    [Migration("20240210001717_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20240225172409_InitialMigrate")]
+    partial class InitialMigrate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,8 +26,8 @@ namespace Pilot.Infrastructure.Migrations
 
             modelBuilder.Entity("LanguageReferee", b =>
                 {
-                    b.Property<Guid>("LanguagesId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("LanguagesId")
+                        .HasColumnType("int");
 
                     b.Property<Guid>("RefereesId")
                         .HasColumnType("uniqueidentifier");
@@ -41,8 +41,8 @@ namespace Pilot.Infrastructure.Migrations
 
             modelBuilder.Entity("Pilot.Domain.Entities.Competition", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -61,8 +61,8 @@ namespace Pilot.Infrastructure.Migrations
 
             modelBuilder.Entity("Pilot.Domain.Entities.Language", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
 
                     b.Property<string>("Diaclect")
                         .IsRequired()
@@ -79,8 +79,8 @@ namespace Pilot.Infrastructure.Migrations
                     b.Property<Guid>("RefereeId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("CompetitionId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("CompetitionId")
+                        .HasColumnType("int");
 
                     b.Property<Guid>("Id")
                         .HasColumnType("uniqueidentifier");
