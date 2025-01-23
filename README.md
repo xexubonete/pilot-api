@@ -98,48 +98,10 @@ pilot-API/
     │   ├── Properties
     │   │   └── launchSettings.json
     │   ├── appsettings.Development.json
-    │   ├── appsettings.json
-    │   ├── bin
-    │   │   └── Debug
-    │   │       └── net6.0
-    │   └── obj
-    │       ├── Debug
-    │       │   └── net6.0
-    │       │       ├── Pilot.API.AssemblyInfo.cs
-    │       │       ├── Pilot.API.AssemblyInfoInputs.cache
-    │       │       ├── Pilot.API.GeneratedMSBuildEditorConfig.editorconfig
-    │       │       ├── Pilot.API.GlobalUsings.g.cs
-    │       │       ├── Pilot.API.assets.cache
-    │       │       ├── Pilot.API.csproj.AssemblyReference.cache
-    │       │       ├── ref
-    │       │       └── refint
-    │       ├── Pilot.API.csproj.nuget.dgspec.json
-    │       ├── Pilot.API.csproj.nuget.g.props
-    │       ├── Pilot.API.csproj.nuget.g.targets
-    │       ├── project.assets.json
-    │       └── project.nuget.cache
+    │   └── appsettings.json
     ├── Pilot.Application
     │   ├── DependencyInjection.cs
-    │   ├── Pilot.Application.csproj
-    │   ├── bin
-    │   │   └── Debug
-    │   │       └── net6.0
-    │   └── obj
-    │       ├── Debug
-    │       │   └── net6.0
-    │       │       ├── Pilot.Application.AssemblyInfo.cs
-    │       │       ├── Pilot.Application.AssemblyInfoInputs.cache
-    │       │       ├── Pilot.Application.GeneratedMSBuildEditorConfig.editorconfig
-    │       │       ├── Pilot.Application.GlobalUsings.g.cs
-    │       │       ├── Pilot.Application.assets.cache
-    │       │       ├── Pilot.Application.csproj.AssemblyReference.cache
-    │       │       ├── ref
-    │       │       └── refint
-    │       ├── Pilot.Application.csproj.nuget.dgspec.json
-    │       ├── Pilot.Application.csproj.nuget.g.props
-    │       ├── Pilot.Application.csproj.nuget.g.targets
-    │       ├── project.assets.json
-    │       └── project.nuget.cache
+    │   └── Pilot.Application.csproj
     ├── Pilot.Domain
     │   ├── Entities
     │   │   ├── Competition.cs
@@ -148,26 +110,7 @@ pilot-API/
     │   │   ├── Player.cs
     │   │   ├── Referee.cs
     │   │   └── Team.cs
-    │   ├── Pilot.Domain.csproj
-    │   ├── bin
-    │   │   └── Debug
-    │   │       └── net6.0
-    │   └── obj
-    │       ├── Debug
-    │       │   └── net6.0
-    │       │       ├── Pilot.Domain.AssemblyInfo.cs
-    │       │       ├── Pilot.Domain.AssemblyInfoInputs.cache
-    │       │       ├── Pilot.Domain.GeneratedMSBuildEditorConfig.editorconfig
-    │       │       ├── Pilot.Domain.GlobalUsings.g.cs
-    │       │       ├── Pilot.Domain.assets.cache
-    │       │       ├── Pilot.Domain.csproj.AssemblyReference.cache
-    │       │       ├── ref
-    │       │       └── refint
-    │       ├── Pilot.Domain.csproj.nuget.dgspec.json
-    │       ├── Pilot.Domain.csproj.nuget.g.props
-    │       ├── Pilot.Domain.csproj.nuget.g.targets
-    │       ├── project.assets.json
-    │       └── project.nuget.cache
+    │   └── Pilot.Domain.csproj
     └── Pilot.Infrastructure
         ├── DependencyInjection.cs
         ├── Migrations
@@ -187,26 +130,7 @@ pilot-API/
         │   └── Scripts
         │       ├── dbo.Competition.Table.sql
         │       └── dbo.Language.Table.sql
-        ├── Pilot.Infrastructure.csproj
-        ├── bin
-        │   └── Debug
-        │       └── net6.0
-        └── obj
-            ├── Debug
-            │   └── net6.0
-            │       ├── Pilot.Infrastructure.AssemblyInfo.cs
-            │       ├── Pilot.Infrastructure.AssemblyInfoInputs.cache
-            │       ├── Pilot.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-            │       ├── Pilot.Infrastructure.GlobalUsings.g.cs
-            │       ├── Pilot.Infrastructure.assets.cache
-            │       ├── Pilot.Infrastructure.csproj.AssemblyReference.cache
-            │       ├── ref
-            │       └── refint
-            ├── Pilot.Infrastructure.csproj.nuget.dgspec.json
-            ├── Pilot.Infrastructure.csproj.nuget.g.props
-            ├── Pilot.Infrastructure.csproj.nuget.g.targets
-            ├── project.assets.json
-            └── project.nuget.cache
+        └── Pilot.Infrastructure.csproj
 ```
 
 ## 📝 License
