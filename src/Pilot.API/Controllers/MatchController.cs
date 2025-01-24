@@ -5,9 +5,9 @@ namespace Pilot.API.Controllers
     public class MatchController : ApiController
     {
         [HttpGet]
-        public async Task CreateMatch()
+        public IActionResult CreateMatch()
         {
-
+            return Ok();
         }
     }
 }

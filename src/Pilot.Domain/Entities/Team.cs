@@ -5,9 +5,9 @@ namespace Pilot.Domain.Entities
     public class Team
     {
         public Guid Id { get; init; }
-        public string Name { get; }
-        public string Country { get; }
-        public IEnumerable<Competition> Competitions { get; }
+        public string Name { get; init; } = string.Empty;
+        public string Country { get; init; } = string.Empty;
+        public IEnumerable<Competition> Competitions { get; init; } = new List<Competition>();
 
         //Navigational properties
         public IEnumerable<Match>? LocalMatchs { get; set; }

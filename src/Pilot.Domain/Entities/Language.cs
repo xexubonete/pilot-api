@@ -5,7 +5,7 @@ namespace Pilot.Domain.Entities
     public class Language
     {
         public int Id { get; set; }
-        public string Diaclect { get; set; }
+        public string Diaclect { get; set; } = string.Empty;
 
         // Navigational properties
         public IEnumerable<Referee>? Referees { get; set; }

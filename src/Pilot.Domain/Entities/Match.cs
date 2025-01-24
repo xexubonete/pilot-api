@@ -3,14 +3,15 @@ namespace Pilot.Domain.Entities
     public class Match
     {
         public Guid Id { get; init; }
-        public Guid RefereeId { get; }
-        public int CompetitionId { get; }
+        public Guid RefereeId { get; private set; }
+        public int CompetitionId { get; private set; }
 
         //Navigational properties
-        public Team LocalTeam { get; set; }
-        public Team VisitorTeam { get; set; }
+        public Team LocalTeam { get; set; } = null!;
+        public Team VisitorTeam { get; set; } = null!;
 
-        public Match(){}
+        private Match() {} // Para EF Core
+
         public Match(Guid id, Guid refereeId, int competitionId, Team localTeam, Team visitorTeam)
         {
             Id = id;
