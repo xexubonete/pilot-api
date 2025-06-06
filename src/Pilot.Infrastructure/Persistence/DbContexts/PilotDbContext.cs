@@ -22,7 +22,7 @@ namespace Pilot.Infrastructure.Persistence.DbContexts
         protected override void OnModelCreating (ModelBuilder builder)
         {
             // It is not necessary when using MSSQL; the default schema is public.
-            // builder.HasDefaultSchema("public");
+            builder.HasDefaultSchema("public");
 
             // EntityConfigurations mapping: Applies entity configurations from the current assembly. 
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
