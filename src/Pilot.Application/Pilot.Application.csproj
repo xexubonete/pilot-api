@@ -17,9 +17,4 @@
     <PackageReference Include="Ardalis.GuardClauses" Version="5.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Matchs\Commands\" />
-    <Folder Include="Matchs\Queries\" />
-  </ItemGroup>
-
 </Project>
