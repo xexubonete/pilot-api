@@ -12,8 +12,13 @@ namespace Pilot.Infrastructure
         {
             // Agrega el contexto de base de datos PilotDbContext al contenedor de servicios de ASP.NET Core.
             // Utiliza Entity Framework Core para trabajar con la base de datos SQL Server.
+            // services.AddDbContext<PilotDbContext>(options =>
+            //     options.UseAzureSql(
+            //         configuration.GetConnectionString("DefaultConnection"),
+            //         b => b.MigrationsAssembly(typeof(PilotDbContext).Assembly.FullName)));
+            
             services.AddDbContext<PilotDbContext>(options =>
-                options.UseAzureSql(
+                options.UseNpgsql(
                     configuration.GetConnectionString("DefaultConnection"),
                     b => b.MigrationsAssembly(typeof(PilotDbContext).Assembly.FullName)));
 
