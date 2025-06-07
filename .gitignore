@@ -6,6 +6,7 @@
 ##
 
 ## CUSTOM
+src/Pilot.API/Properties/launchSettings.json
 
 # Carpeta bin generada por compilación
 src/Pilot.API/bin/
