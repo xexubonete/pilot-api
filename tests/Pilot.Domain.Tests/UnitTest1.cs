@@ -1,4 +1,4 @@
-namespace Pilot.Infrastructure.Test;
+namespace Pilot.Domain.Tests;
 
 public class UnitTest1
 {
